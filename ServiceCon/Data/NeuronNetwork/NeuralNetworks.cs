@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json.Serialization;
+using ServiceCon.Data;
+using ServiceCon.Data.Controllers;
 
 namespace NeurualNetwork
 {
     public class NeuralNetworks
     {
-        public Topology Topology { get; }
-        public List<Layer> Layers { get; }
+        [JsonPropertyName("Topology")]
+        public Topology Topology { get; private set; }
+        [JsonPropertyName("Layers")]
+        public List<Layer> Layers { get; private set; }
 
+        public NeuralNetworks()
+        {
+            this.Load();
+        }
         public NeuralNetworks(Topology topology)
         {
             Topology = topology;
@@ -147,6 +154,18 @@ namespace NeurualNetwork
             }
             var inputLayer = new Layer(inputNeurons,NeuronType.Input);
             Layers.Add(inputLayer);
+        }
+
+        public void Save()
+        {
+            SerializibleController.SaveAsync<NeuralNetworks>(this, PublicSettings.Path);
+        }
+
+        private void Load()
+        {
+            NeuralNetworks networks = SerializibleController.LoadAsync<NeuralNetworks>(PublicSettings.Path).Result;
+            this.Layers = networks.Layers;
+            this.Topology = networks.Topology;
         }
     }
 }

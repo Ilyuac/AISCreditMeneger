@@ -5,9 +5,9 @@ namespace NeurualNetwork
 {
     public class Neuron
     {
-        public List<double> Weights { get; }
-        public List<double> Inputs { get; }
-        public NeuronType NeuronType { get; }
+        public List<double> Weights { get; /*private set;*/ }
+        public List<double> Inputs { get; /*private set;*/ }
+        public NeuronType NeuronType { get; /*private set;*/ }
         public double Output { get; private set; }
         public double Delta { get; private set; }
 
@@ -95,6 +95,17 @@ namespace NeurualNetwork
                 Weights[i] = newWeight;
             }
         }
+
+        //public void LoadNeuron(int input_Count, List<double> weights, NeuronType type = NeuronType.Normal)
+        //{
+        //    if (input_Count > 0)
+        //    {
+        //        NeuronType = type;
+        //        Weights = weights;
+        //        Inputs = new List<double>();
+
+        //    }//TODOO: Возможна проверка на корректность данных
+        //}
 
         public override string ToString()//Отладчик
         { return Output.ToString(); }
