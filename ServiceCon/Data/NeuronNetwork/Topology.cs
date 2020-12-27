@@ -21,5 +21,10 @@ namespace NeurualNetwork
             HiddenLayers.AddRange(layers);
 
         }
+
+        public Topology()
+        {
+                
+        }
     }
 }

@@ -16,6 +16,11 @@ namespace NeurualNetwork
             Type = type;
         }
 
+        public Layer()
+        {
+
+        }
+
         public List<double> GetSignals()
         {
             var result = new List<double>();

@@ -22,6 +22,10 @@ namespace NeurualNetwork
                 InitWheghtsRandomValue(input_Count);
             }//TODOO: Возможна проверка на корректность данных
         }
+        public Neuron()
+        {
+
+        }
 
         private void InitWheghtsRandomValue(int input_Count)
         {

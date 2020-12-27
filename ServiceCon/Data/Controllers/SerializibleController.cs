@@ -15,7 +15,6 @@ namespace ServiceCon.Data.Controllers
                 await JsonSerializer.SerializeAsync<T>(fs, obj);
             }
             Console.WriteLine("Data has been saved to file");
-            throw new Exception("Data has been saved to file");
         }
 
         public static async Task<T> LoadAsync<T>(string path)

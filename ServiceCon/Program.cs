@@ -28,7 +28,10 @@ namespace ServiceCon
             // var defference = neuronNetwork.Learn(dataset, 1000);
             try
             {
-                neuronNetwork.Save();
+                //neuronNetwork.Save();
+
+                var network = new NeuralNetworks();
+                Console.WriteLine("Load neuronnetwork");
             }
             catch (Exception ex)
             {
