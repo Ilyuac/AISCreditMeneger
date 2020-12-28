@@ -1,7 +1,6 @@
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.csprojAssemblyReference.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.AssemblyInfoInputs.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.AssemblyInfo.cs
-D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.csproj.CoreCompileInputs.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\bin\Debug\netcoreapp3.1\ServiceCon.exe
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\bin\Debug\netcoreapp3.1\ServiceCon.deps.json
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\bin\Debug\netcoreapp3.1\ServiceCon.runtimeconfig.json
@@ -11,3 +10,6 @@ D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\bin\Debug\netcoreapp3
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.pdb
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.genruntimeconfig.cache
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.csproj.CoreCompileInputs.cache
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\ServiceCon\obj\Debug\netcoreapp3.1\ServiceCon.csproj.CopyComplete

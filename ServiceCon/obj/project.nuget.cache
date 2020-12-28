@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ekn8evppcO6Qk2APBICftfV0LQdNGSyhCCrx3y9wN/pVdy2iYbiReO8KX2V7x/ngy5rVqnjsPVUs31qZ5U5xiA==",
+  "dgSpecHash": "S8DxeicbcPNhtTnYyk3thFsfg9SKcz22kD1CXpRMuA0VsetAU3cblzSz/wyShIsmCDYBK7i9n87urL8j2g+CZg==",
   "success": true,
   "projectFilePath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\ServiceCon\\ServiceCon.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\GHOST\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

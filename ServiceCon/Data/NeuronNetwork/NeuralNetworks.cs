@@ -10,13 +10,13 @@ namespace NeurualNetwork
     public class NeuralNetworks
     {
         [JsonPropertyName("Topology")]
-        public Topology Topology { get; private set; }
+        public Topology Topology { get; set; }
         [JsonPropertyName("Layers")]
-        public List<Layer> Layers { get; private set; }
+        public List<Layer> Layers { get; set; }
 
         public NeuralNetworks()
         {
-            this.Load();
+
         }
         public NeuralNetworks(Topology topology)
         {
@@ -25,6 +25,17 @@ namespace NeurualNetwork
             Layers = new List<Layer>();
 
             CreateInputLayer();            
+            CreateHiddenLayers();
+            CreateOutputLayer();
+        }
+
+        private NeuralNetworks(Topology topology, List<Layer> layers)
+        {
+            Topology = topology;
+
+            Layers = layers;
+
+            CreateInputLayer();
             CreateHiddenLayers();
             CreateOutputLayer();
         }
@@ -158,12 +169,12 @@ namespace NeurualNetwork
 
         public void Save()
         {
-            SerializibleController.SaveAsync<NeuralNetworks>(this, PublicSettings.Path);
+            SerializibleController.Save<NeuralNetworks>(this, PublicSettings.Path);
         }
 
-        private void Load()
+        public void Load()
         {
-            NeuralNetworks networks = SerializibleController.LoadAsync<NeuralNetworks>(PublicSettings.Path).Result;
+            NeuralNetworks networks = SerializibleController.Load<NeuralNetworks>(PublicSettings.Path);
             this.Layers = networks.Layers;
             this.Topology = networks.Topology;
         }

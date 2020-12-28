@@ -5,11 +5,11 @@ namespace NeurualNetwork
 {
     public class Neuron
     {
-        public List<double> Weights { get; /*private set;*/ }
-        public List<double> Inputs { get; /*private set;*/ }
-        public NeuronType NeuronType { get; /*private set;*/ }
-        public double Output { get; private set; }
-        public double Delta { get; private set; }
+        public List<double> Weights { get; set; }
+        public List<double> Inputs { get; set; }
+        public NeuronType NeuronType { get; set; }
+        public double Output { get; set; }
+        public double Delta { get; set; }
 
         public Neuron(int input_Count, NeuronType type=NeuronType.Normal)
         {

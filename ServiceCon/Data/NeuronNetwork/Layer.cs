@@ -4,7 +4,7 @@ namespace NeurualNetwork
 {
     public class Layer
     {
-        public List<Neuron> Neurons { get; }//Нейроны слоя
+        public List<Neuron> Neurons { get; set; }//Нейроны слоя
         public int NeuronCout => Neurons?.Count ?? 0; //проверка что слой непустой
         public NeuronType Type;
 
