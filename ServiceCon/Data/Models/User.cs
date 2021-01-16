@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-namespace AISCreditMeneger.Data.Models
+namespace ServiceCon.Data.Models
 {
     public enum Gender
     {

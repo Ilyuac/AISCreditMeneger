@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AISCreditMeneger.Data.Models
+namespace ServiceCon.Data.Models
 {
     public class Credit
     {

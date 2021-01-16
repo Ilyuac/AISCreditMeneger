@@ -1,4 +1,4 @@
-﻿using NeurualNetwork;
+﻿using ServiceCon.Data.Models.NeurualNetwork;
 using System;
 using System.Collections.Generic;
 
@@ -28,7 +28,8 @@ namespace ServiceCon
             // var defference = neuronNetwork.Learn(dataset, 1000);
             try
             {
-                neuronNetwork.Save();
+                ServiceCon.Data.Controllers.SerializibleController.Save<Topology>(topology, ServiceCon.Data.PublicSettings.Path);
+                //neuronNetwork.Save();
 
                 var network = new NeuralNetworks();
                 network.Load();

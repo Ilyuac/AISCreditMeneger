@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AISCreditMeneger.Data.Models
+namespace ServiceCon.Data.Models
 {
     public class ClientProfile
     {

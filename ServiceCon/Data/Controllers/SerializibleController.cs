@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace ServiceCon.Data.Controllers
 {
@@ -20,6 +19,7 @@ namespace ServiceCon.Data.Controllers
             // чтение данных
             string json = File.ReadAllText(path);
             var obj = JsonConvert.DeserializeObject<T>(json);
+            Console.WriteLine("Data has been loaded for file");
             return obj;
         }
     }

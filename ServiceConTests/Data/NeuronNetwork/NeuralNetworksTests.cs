@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NeurualNetwork;
+using ServiceCon.Data.Models.NeurualNetwork;
 using System;
 using System.Collections.Generic;
 using System.Text;
