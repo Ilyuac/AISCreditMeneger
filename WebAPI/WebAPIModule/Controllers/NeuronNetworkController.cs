@@ -14,6 +14,7 @@ namespace WebAPIModule.Controllers
     public class NeuronNetworkController : ControllerBase
     {
         private NeuralNetworks NeuralNetworks;
+        private Neuron result;
         private ILogger<NeuronNetworkController> _logger;
         public NeuronNetworkController(ILogger<NeuronNetworkController> logger, string jsonConf)
         {
@@ -21,21 +22,24 @@ namespace WebAPIModule.Controllers
             NeuralNetworks.SetConfig(jsonConf);
         }
 
-        [HttpGet]
-        public async Task<ActionResult<Neuron>> GetResult(List<double> vector)
-        {
-           Neuron result = NeuralNetworks.FeedForward(vector.ToArray());
-            if(result == null)
-            {
-                return NoContent();
-            }
-            return new ObjectResult(result);
-        }
-
         [HttpPost]
         public void PostNeuronNetwork(NeuralNetworks networks)
         {
             NeuralNetworks = networks;
+        }
+
+        [HttpPost]
+        public IActionResult PostResult(List<double> vector)
+        {
+            result = NeuralNetworks.FeedForward(vector.ToArray());
+            if(result==null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(result.Output);
+            }
         }
     }
 }
