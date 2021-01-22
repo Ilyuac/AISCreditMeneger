@@ -16,19 +16,30 @@ namespace WebAPIModule.Controllers
     [ApiController]
     public class ConfigGeneratorController : ControllerBase
     {
-        private NeuralNetworks NeuralNetworks= new NeuralNetworks(new Topology(8, 1, 0.002, 4, 2));//8,1,0.002,4,2
+        private static Topology topology = new Topology(8, 1, 0.002, 4, 2);
+        private NeuralNetworks NeuralNetworks = new NeuralNetworks(topology);//8,1,0.002,4,2
         private ILogger<NeuronNetworkController> _logger;
         LerningController LerningController;
+
         public ConfigGeneratorController(ILogger<NeuronNetworkController> logger)
         {
             _logger = logger;
             LerningController = new LerningController(logger, ref NeuralNetworks);
         }
+        //// GET: api/<ConfigGeneratorController>
+        //[HttpGet]
+        //public string Get()
+        //{
+        //    return NeuralNetworks.GetConfig();
+        //}
         // GET: api/<ConfigGeneratorController>
-        [HttpGet]
-        public string Get()
+        [HttpGet("isTopology")]
+        public string Get(bool isTopology)
         {
-            return NeuralNetworks.GetConfig();
+            if (isTopology)
+                return SerializibleController.ConvertToJsonString(topology);
+            else
+                return NeuralNetworks.GetConfig();
         }
         // POST api/<ConfigGeneratorController>
         [HttpPost]
@@ -40,7 +51,7 @@ namespace WebAPIModule.Controllers
             return Ok(NeuralNetworks);
         }
         //// PUT api/<ConfigGeneratorController>
-        [HttpPut]
+        [HttpPost]
         public IActionResult LoadConfig(NeuralNetworks config)
         {
             NeuralNetworks = new NeuralNetworks();

@@ -13,5 +13,7 @@ namespace FormForTest.Models
         public Marital_Status Marital_Status { get; set; }
         public int Salary { get; set; }
         public string Phone { get; set; }
+
+        public List<Logbook> Logbooks { get; } = new List<Logbook>();
     }
 }

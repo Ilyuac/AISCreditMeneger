@@ -120,6 +120,9 @@
   <data name="ConnectionStriing" xml:space="preserve">
     <value>Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\Data\LocalDB.mdf";Integrated Security=True</value>
   </data>
+  <data name="InitializateUrl" xml:space="preserve">
+    <value>/NeuronNetwork</value>
+  </data>
   <data name="Path_API" xml:space="preserve">
     <value>https://localhost:44343/api</value>
   </data>
@@ -128,5 +131,8 @@
   </data>
   <data name="Port" xml:space="preserve">
     <value>44343</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>1</value>
   </data>
 </root>

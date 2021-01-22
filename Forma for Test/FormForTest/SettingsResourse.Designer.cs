@@ -70,6 +70,15 @@ namespace FormForTest {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на /NeuronNetwork.
+        /// </summary>
+        internal static string InitializateUrl {
+            get {
+                return ResourceManager.GetString("InitializateUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на https://localhost:44343/api.
         /// </summary>
         internal static string Path_API {
@@ -93,6 +102,15 @@ namespace FormForTest {
         internal static string Port {
             get {
                 return ResourceManager.GetString("Port", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на 1.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

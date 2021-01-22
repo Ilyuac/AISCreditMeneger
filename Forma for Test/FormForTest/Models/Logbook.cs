@@ -6,7 +6,7 @@ namespace FormForTest.Models
 {
     class Logbook
     {
-        public DateTime Id { get; set; }
+        public DateTime Id { get; set; } = DateTime.UtcNow;
 
         public int UserId { get; set; }
         public User User { get; set; }

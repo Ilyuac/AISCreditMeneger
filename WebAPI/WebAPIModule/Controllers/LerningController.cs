@@ -9,7 +9,7 @@ using WebAPIModule.Models.NeurualNetwork;
 
 namespace WebAPIModule.Controllers
 {
-    [Route("api/ConfigGeneratorController/[controller]")]
+    [Route("api/ConfigGenerator/[controller]")]
     [ApiController]
     public class LerningController : ControllerBase
     {
@@ -20,12 +20,10 @@ namespace WebAPIModule.Controllers
             _logger = logger;
             NeuralNetworks = networks;
         }
-
         [HttpPost]//Добавить отметку о завершении обучения
         public void LoadDataSet(List<Tuple<double, double[]>> DataSet, int epoch)
         {
             NeuralNetworks.Learn(DataSet, epoch);
         }
-
     }
 }

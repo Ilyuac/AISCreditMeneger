@@ -11,5 +11,7 @@ namespace FormForTest.Models
         public string Password { get; set; }
         public string Name { get; set; }
         public Role Role { get; set; } = Role.User;
+
+        public List<Logbook> Logbooks { get; } = new List<Logbook>();
     }
 }

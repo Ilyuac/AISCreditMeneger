@@ -1,34 +1,54 @@
-﻿using System;
+﻿using FormForTest.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
-using System.Text;
 
 namespace FormForTest.Controllers
 {
-    class UserQuerController//переработать с учетом новых классов httprequest
+    class UserQuerController
     {
-        public UserQuerController()
+        User User;
+        string UrlStr="/NeuronNetwork";
+        HttpRequestController HttpRequest;
+        public UserQuerController(User user)
         {
-            using(var client = new HttpClient())
-            {
-                client.PostAsJsonAsync(SettingsResourse.Path_API + "", OpenNNFile());//проверить
-            }
+            User = user ?? throw new ArgumentNullException("Пользователь не варифицирован.",nameof(user));
+            HttpRequest = new HttpRequestController();
+
+            string json = OpenNNFile();
+            if (!string.IsNullOrWhiteSpace(json))
+                HttpRequest.POST_HttpReuest(SettingsResourse.Path_API+UrlStr, json);
+            else
+                throw new Exception("Файл с настройками нейронной сети был пуст. Обратитесь к администратору.");
         }
-        public bool QuerUser(List<double> inputVector)
+
+        public bool QuerUser(string url, List<double> inputVector)
         {
-            using (var client = new HttpClient())
+            if (inputVector != null)
             {
-                //var result = client.get
+                string json = JsonSerlizebleController.ConvertToJsonString(inputVector);
+                var result = HttpRequest.POST_HttpReuest(url, json);
+
+                if (Convert.ToDouble(SettingsResourse.Yes) >= Convert.ToDouble(result))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            return false;
+            else
+            {
+                throw new Exception("inputVector был null.");
+            }
         }
 
         private string OpenNNFile()
         {
             using (var stream = new StreamReader(SettingsResourse.Path_NN))
             {
-               return stream.ReadToEnd();
+                return stream.ReadToEnd();
             }
         }
     }
