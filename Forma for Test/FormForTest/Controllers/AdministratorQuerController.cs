@@ -1,6 +1,7 @@
 ﻿using FormForTest.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace FormForTest.Controllers
@@ -36,7 +37,25 @@ namespace FormForTest.Controllers
         }
         public void Lerning()
         {
-            //Придумать как извлечь  обучающую выборку.
+            //Придумать как извлечь обучающую выборку.
+        }
+        private string OpenFile(string path)
+        {
+            string result;
+            using (var ReadStream = new StreamReader(path))
+            {
+                result = ReadStream.ReadToEnd();
+            }
+
+            return result;
+        }
+        public string CreateNewSelection()
+        {
+            List<Tuple<double, double[]>> Selection = new List<Tuple<double, double[]>>();
+
+
+
+            return JsonSerlizebleController.ConvertToJsonString(Selection);
         }
     }
 }

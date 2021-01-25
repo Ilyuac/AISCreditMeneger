@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FormForTest.Models
 {
-    class User
+    public class User
     {
         public int UserId { get; set; }
         public string Login { get; set; }

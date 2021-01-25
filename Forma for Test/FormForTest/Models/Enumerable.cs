@@ -4,33 +4,33 @@ using System.Text;
 
 namespace FormForTest.Models
 {
-    enum Method
+    public enum Method
     {
         GET,
         POST
     }
-    enum Role
+    public enum Role
     {
         User,
         Admin
     }
-    enum Realty
+    public enum Realty
     {
         None,
         House,
         Apartment
     }
-    enum Marital_Status
+    public enum Marital_Status
     {
         Single,
         Married
     }
-    enum Cars
+    public enum Cars
     {
         Yes,
         No
     }
-    enum Gender
+    public enum Gender
     {
         Female,
         Male

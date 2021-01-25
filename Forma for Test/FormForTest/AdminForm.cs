@@ -1,22 +1,21 @@
-﻿using System;
+﻿using FormForTest.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FormForTest
 {
-    public partial class TestForm : Form
+    public partial class AdminForm : Form
     {
-
-        public TestForm()
+        User User;
+        public AdminForm(User user)
         {
             InitializeComponent();
+            User = user;
         }
-
     }
 }

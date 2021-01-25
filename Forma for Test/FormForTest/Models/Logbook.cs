@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FormForTest.Models
 {
-    class Logbook
+    public class Logbook
     {
         public DateTime Id { get; set; } = DateTime.UtcNow;
 

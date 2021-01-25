@@ -4,7 +4,7 @@ using System.Text;
 
 namespace FormForTest.Models
 {
-    class Request
+    public class Request
     {
         public int RequestId { get; set; }
         public string Name { get; set; }
@@ -14,6 +14,6 @@ namespace FormForTest.Models
         public int Salary { get; set; }
         public string Phone { get; set; }
 
-        public List<Logbook> Logbooks { get; } = new List<Logbook>();
+        List<Logbook> Logbooks { get; } = new List<Logbook>();
     }
 }
