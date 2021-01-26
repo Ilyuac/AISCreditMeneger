@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace FormForTest.Models
 {
@@ -14,6 +12,6 @@ namespace FormForTest.Models
         public int Salary { get; set; }
         public string Phone { get; set; }
 
-        List<Logbook> Logbooks { get; } = new List<Logbook>();
+        public List<Logbook> Logbooks { get; } = new List<Logbook>();
     }
 }
