@@ -62,6 +62,7 @@ namespace FormForTest.Controllers
 
             ContextDB.Logbooks.Add(logbook);
             ContextDB.Requests.First(r=>r.RequestId == request.RequestId).Logbooks.Add(logbook);
+            ContextDB.Users.Find(User).Logbooks.Add(logbook);
             ContextDB.SaveChanges();
         }
         public void CreateRequest(Request request)

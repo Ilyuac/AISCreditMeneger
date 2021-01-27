@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.gBox = new System.Windows.Forms.GroupBox();
-            this.butPost = new System.Windows.Forms.Button();
-            this.cBox_GenderIn = new System.Windows.Forms.ComboBox();
-            this.tBox_FIOIn = new System.Windows.Forms.TextBox();
-            this.progBar = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cBox_RealtyIn = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cBox_MaterialStatusIn = new System.Windows.Forms.ComboBox();
-            this.cBox_CarsIn = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tBox_SalaryIn = new System.Windows.Forms.TextBox();
+            this.mtBox_PhoneIn = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tBox_SalaryIn = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cBox_CarsIn = new System.Windows.Forms.ComboBox();
+            this.cBox_MaterialStatusIn = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cBox_RealtyIn = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progBar = new System.Windows.Forms.ProgressBar();
+            this.tBox_FIOIn = new System.Windows.Forms.TextBox();
+            this.cBox_GenderIn = new System.Windows.Forms.ComboBox();
+            this.butPost = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.MenuStrip();
             this.toolStripSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripUser = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripEnglish = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripRussian = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripExit = new System.Windows.Forms.ToolStripMenuItem();
             this.label8 = new System.Windows.Forms.Label();
             this.tBox_SalaryOut = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,12 +67,11 @@
             this.cBox_GenderOut = new System.Windows.Forms.ComboBox();
             this.butFixed = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mtBox_PhoneIn = new System.Windows.Forms.MaskedTextBox();
-            this.mtBox_PhoneOut = new System.Windows.Forms.MaskedTextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.chBoxRecomendate = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chBoxRecomendate = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.mtBox_PhoneOut = new System.Windows.Forms.MaskedTextBox();
             this.gBox.SuspendLayout();
             this.Menu.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -102,105 +102,29 @@
             this.gBox.TabStop = false;
             this.gBox.Text = "Anketa";
             // 
-            // butPost
+            // mtBox_PhoneIn
             // 
-            this.butPost.Location = new System.Drawing.Point(201, 233);
-            this.butPost.Name = "butPost";
-            this.butPost.Size = new System.Drawing.Size(89, 26);
-            this.butPost.TabIndex = 0;
-            this.butPost.Text = "PostAnket";
-            this.butPost.UseVisualStyleBackColor = true;
+            this.mtBox_PhoneIn.Location = new System.Drawing.Point(111, 203);
+            this.mtBox_PhoneIn.Mask = "(999) 000-0000";
+            this.mtBox_PhoneIn.Name = "mtBox_PhoneIn";
+            this.mtBox_PhoneIn.Size = new System.Drawing.Size(179, 23);
+            this.mtBox_PhoneIn.TabIndex = 6;
             // 
-            // cBox_GenderIn
+            // label7
             // 
-            this.cBox_GenderIn.FormattingEnabled = true;
-            this.cBox_GenderIn.Location = new System.Drawing.Point(111, 59);
-            this.cBox_GenderIn.Name = "cBox_GenderIn";
-            this.cBox_GenderIn.Size = new System.Drawing.Size(179, 23);
-            this.cBox_GenderIn.TabIndex = 1;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Salary:";
             // 
-            // tBox_FIOIn
+            // tBox_SalaryIn
             // 
-            this.tBox_FIOIn.Location = new System.Drawing.Point(111, 30);
-            this.tBox_FIOIn.Name = "tBox_FIOIn";
-            this.tBox_FIOIn.Size = new System.Drawing.Size(179, 23);
-            this.tBox_FIOIn.TabIndex = 2;
-            // 
-            // progBar
-            // 
-            this.progBar.Location = new System.Drawing.Point(21, 265);
-            this.progBar.Name = "progBar";
-            this.progBar.Size = new System.Drawing.Size(269, 10);
-            this.progBar.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "FIO:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Gender:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 91);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Realty:";
-            // 
-            // cBox_RealtyIn
-            // 
-            this.cBox_RealtyIn.FormattingEnabled = true;
-            this.cBox_RealtyIn.Location = new System.Drawing.Point(111, 88);
-            this.cBox_RealtyIn.Name = "cBox_RealtyIn";
-            this.cBox_RealtyIn.Size = new System.Drawing.Size(179, 23);
-            this.cBox_RealtyIn.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Marital_Status:";
-            // 
-            // cBox_MaterialStatusIn
-            // 
-            this.cBox_MaterialStatusIn.FormattingEnabled = true;
-            this.cBox_MaterialStatusIn.Location = new System.Drawing.Point(111, 117);
-            this.cBox_MaterialStatusIn.Name = "cBox_MaterialStatusIn";
-            this.cBox_MaterialStatusIn.Size = new System.Drawing.Size(179, 23);
-            this.cBox_MaterialStatusIn.TabIndex = 1;
-            // 
-            // cBox_CarsIn
-            // 
-            this.cBox_CarsIn.FormattingEnabled = true;
-            this.cBox_CarsIn.Location = new System.Drawing.Point(111, 146);
-            this.cBox_CarsIn.Name = "cBox_CarsIn";
-            this.cBox_CarsIn.Size = new System.Drawing.Size(179, 23);
-            this.cBox_CarsIn.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 15);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Cars:";
+            this.tBox_SalaryIn.Location = new System.Drawing.Point(111, 175);
+            this.tBox_SalaryIn.Name = "tBox_SalaryIn";
+            this.tBox_SalaryIn.Size = new System.Drawing.Size(179, 23);
+            this.tBox_SalaryIn.TabIndex = 2;
             // 
             // label6
             // 
@@ -211,21 +135,105 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Phone:";
             // 
-            // tBox_SalaryIn
+            // label5
             // 
-            this.tBox_SalaryIn.Location = new System.Drawing.Point(111, 175);
-            this.tBox_SalaryIn.Name = "tBox_SalaryIn";
-            this.tBox_SalaryIn.Size = new System.Drawing.Size(179, 23);
-            this.tBox_SalaryIn.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 149);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 15);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Cars:";
             // 
-            // label7
+            // cBox_CarsIn
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 15);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Salary:";
+            this.cBox_CarsIn.FormattingEnabled = true;
+            this.cBox_CarsIn.Location = new System.Drawing.Point(111, 146);
+            this.cBox_CarsIn.Name = "cBox_CarsIn";
+            this.cBox_CarsIn.Size = new System.Drawing.Size(179, 23);
+            this.cBox_CarsIn.TabIndex = 1;
+            // 
+            // cBox_MaterialStatusIn
+            // 
+            this.cBox_MaterialStatusIn.FormattingEnabled = true;
+            this.cBox_MaterialStatusIn.Location = new System.Drawing.Point(111, 117);
+            this.cBox_MaterialStatusIn.Name = "cBox_MaterialStatusIn";
+            this.cBox_MaterialStatusIn.Size = new System.Drawing.Size(179, 23);
+            this.cBox_MaterialStatusIn.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 15);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Marital_Status:";
+            // 
+            // cBox_RealtyIn
+            // 
+            this.cBox_RealtyIn.FormattingEnabled = true;
+            this.cBox_RealtyIn.Location = new System.Drawing.Point(111, 88);
+            this.cBox_RealtyIn.Name = "cBox_RealtyIn";
+            this.cBox_RealtyIn.Size = new System.Drawing.Size(179, 23);
+            this.cBox_RealtyIn.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 91);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 15);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Realty:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Gender:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "FIO:";
+            // 
+            // progBar
+            // 
+            this.progBar.Location = new System.Drawing.Point(21, 265);
+            this.progBar.Name = "progBar";
+            this.progBar.Size = new System.Drawing.Size(269, 10);
+            this.progBar.TabIndex = 3;
+            // 
+            // tBox_FIOIn
+            // 
+            this.tBox_FIOIn.Location = new System.Drawing.Point(111, 30);
+            this.tBox_FIOIn.Name = "tBox_FIOIn";
+            this.tBox_FIOIn.Size = new System.Drawing.Size(179, 23);
+            this.tBox_FIOIn.TabIndex = 2;
+            // 
+            // cBox_GenderIn
+            // 
+            this.cBox_GenderIn.FormattingEnabled = true;
+            this.cBox_GenderIn.Location = new System.Drawing.Point(111, 59);
+            this.cBox_GenderIn.Name = "cBox_GenderIn";
+            this.cBox_GenderIn.Size = new System.Drawing.Size(179, 23);
+            this.cBox_GenderIn.TabIndex = 1;
+            // 
+            // butPost
+            // 
+            this.butPost.Location = new System.Drawing.Point(201, 233);
+            this.butPost.Name = "butPost";
+            this.butPost.Size = new System.Drawing.Size(89, 26);
+            this.butPost.TabIndex = 0;
+            this.butPost.Text = "PostAnket";
+            this.butPost.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -249,18 +257,6 @@
             this.toolStripSettings.Size = new System.Drawing.Size(61, 20);
             this.toolStripSettings.Text = "Settings";
             // 
-            // toolStripUser
-            // 
-            this.toolStripUser.Name = "toolStripUser";
-            this.toolStripUser.Size = new System.Drawing.Size(42, 20);
-            this.toolStripUser.Text = "User";
-            // 
-            // toolStripExit
-            // 
-            this.toolStripExit.Name = "toolStripExit";
-            this.toolStripExit.Size = new System.Drawing.Size(38, 20);
-            this.toolStripExit.Text = "Exit";
-            // 
             // toolStripLanguage
             // 
             this.toolStripLanguage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -283,6 +279,18 @@
             this.toolStripRussian.Name = "toolStripRussian";
             this.toolStripRussian.Size = new System.Drawing.Size(119, 22);
             this.toolStripRussian.Text = "Русский";
+            // 
+            // toolStripUser
+            // 
+            this.toolStripUser.Name = "toolStripUser";
+            this.toolStripUser.Size = new System.Drawing.Size(42, 20);
+            this.toolStripUser.Text = "User";
+            // 
+            // toolStripExit
+            // 
+            this.toolStripExit.Name = "toolStripExit";
+            this.toolStripExit.Size = new System.Drawing.Size(38, 20);
+            this.toolStripExit.Text = "Exit";
             // 
             // label8
             // 
@@ -436,40 +444,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Anketa";
             // 
-            // mtBox_PhoneIn
+            // checkBox1
             // 
-            this.mtBox_PhoneIn.Location = new System.Drawing.Point(111, 203);
-            this.mtBox_PhoneIn.Mask = "(999) 000-0000";
-            this.mtBox_PhoneIn.Name = "mtBox_PhoneIn";
-            this.mtBox_PhoneIn.Size = new System.Drawing.Size(179, 23);
-            this.mtBox_PhoneIn.TabIndex = 6;
-            // 
-            // mtBox_PhoneOut
-            // 
-            this.mtBox_PhoneOut.Enabled = false;
-            this.mtBox_PhoneOut.Location = new System.Drawing.Point(111, 203);
-            this.mtBox_PhoneOut.Mask = "(999) 000-0000";
-            this.mtBox_PhoneOut.Name = "mtBox_PhoneOut";
-            this.mtBox_PhoneOut.Size = new System.Drawing.Size(179, 23);
-            this.mtBox_PhoneOut.TabIndex = 6;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(21, 233);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 15);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Recomendate:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 259);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 15);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Result:";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(192, 260);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // chBoxRecomendate
             // 
@@ -481,14 +463,32 @@
             this.chBoxRecomendate.TabIndex = 7;
             this.chBoxRecomendate.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // label16
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(192, 260);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(21, 259);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(42, 15);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Result:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(21, 233);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(83, 15);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Recomendate:";
+            // 
+            // mtBox_PhoneOut
+            // 
+            this.mtBox_PhoneOut.Enabled = false;
+            this.mtBox_PhoneOut.Location = new System.Drawing.Point(111, 203);
+            this.mtBox_PhoneOut.Mask = "(999) 000-0000";
+            this.mtBox_PhoneOut.Name = "mtBox_PhoneOut";
+            this.mtBox_PhoneOut.Size = new System.Drawing.Size(179, 23);
+            this.mtBox_PhoneOut.TabIndex = 6;
             // 
             // UserForm
             // 

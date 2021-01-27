@@ -22,6 +22,7 @@ namespace FormForTest.Controllers
                         if (DB.Users.First(u => u.Login == user.Login) == null)
                         {
                             DB.Users.Add(user);
+                            DB.SaveChanges();
                         }
                         else
                         {

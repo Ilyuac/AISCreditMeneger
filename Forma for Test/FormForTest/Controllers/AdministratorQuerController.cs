@@ -12,11 +12,13 @@ namespace FormForTest.Controllers
         string UrlStrCreate = "/ConfigGenerator";
         string UrlStrLern = "/ConfigGenerator/Lerning";
         HttpRequestController HttpRequest;
+        ContextDB ContextDB;
 
         public AdministratorQuerController(User user)
         {
             User = user ?? throw new ArgumentNullException("Пользователь не варифицирован.", nameof(user));
             HttpRequest = new HttpRequestController();
+            ContextDB = new ContextDB();
         }
 
         public string GetTopology()
@@ -38,6 +40,8 @@ namespace FormForTest.Controllers
         public void Lerning()
         {
             //Придумать как извлечь обучающую выборку.
+            string json = CreateNewSelection();
+            HttpRequest.POST_HttpReuest(UrlStrLern, json);
         }
         private string OpenFile(string path)
         {
@@ -56,6 +60,11 @@ namespace FormForTest.Controllers
 
 
             return JsonSerlizebleController.ConvertToJsonString(Selection);
+        }
+        public void RegistrationNewUser(User user)
+        {
+            RegistrationAndLoginController registrationController = new RegistrationAndLoginController(ContextDB);
+            registrationController.RegistrationNewUser(user);
         }
     }
 }
