@@ -14,7 +14,7 @@ namespace FormForTest.Models
 
         public ContextDB()
         {
-            Database.EnsureCreated();
+           // Database.EnsureCreated();
         }
     }
 }

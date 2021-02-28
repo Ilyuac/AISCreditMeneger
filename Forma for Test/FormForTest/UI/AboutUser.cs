@@ -7,10 +7,11 @@ namespace FormForTest
 {
     public partial class AboutUser : UserControl
     {
-        User User;
-        public AboutUser(User user)
+        public User User;
+        public AboutUser()
         {
-            User = user ?? throw new ArgumentNullException(nameof(user));
+            //User = user ?? throw new ArgumentNullException(nameof(user));
+            User = new User();
             InitializeComponent();
 
             cBoxRole.DataSource = new object[] { Role.Admin, Role.User };

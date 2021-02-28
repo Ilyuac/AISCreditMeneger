@@ -10,7 +10,8 @@ namespace FormForTest.Models
         POST
     }
     public enum Role
-    {
+    { 
+        NULL,
         User,
         Admin
     }

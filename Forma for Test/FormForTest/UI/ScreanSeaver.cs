@@ -8,8 +8,9 @@ namespace FormForTest
         Timer Timer;
         public ScreanSeaver()
         {
+            Timer = new Timer();
             InitializeComponent();
-            Timer.Interval = 250;
+            Timer.Interval = 1000;
             Timer.Tick += new EventHandler(Tick);
             Timer.Start();
         }

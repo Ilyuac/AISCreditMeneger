@@ -1,4 +1,4 @@
-﻿namespace FormForTest
+﻿namespace FormForTest.UI
 {
     partial class LoginForm
     {

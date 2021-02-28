@@ -1,4 +1,6 @@
 using FormForTest.Models;
+using FormForTest.UI;
+using FormForTest.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,7 @@ namespace FormForTest
 {
     static class Program
     {
+        
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -29,11 +32,9 @@ namespace FormForTest
             startScreen.Close();
             startScreen.Dispose();
 
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            OpenGrandForm(loginForm.GetUser());
-            loginForm.Close();
-            loginForm.Dispose();
+
+            var loginController = new LoginPresinter(new LoginForm(),OpenGrandForm);
+            loginController.Run();
 
            // Application.Run(new LoginForm());//поискать инфу в инете как закрывать и открывать окна без закрытия приложения.
         }

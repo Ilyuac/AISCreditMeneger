@@ -4,7 +4,6 @@ D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\D
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\FormForTest.runtimeconfig.dev.json
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\FormForTest.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\FormForTest.pdb
-D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.TestForm.resources
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.csproj.GenerateResource.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.AssemblyInfoInputs.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.AssemblyInfo.cs
@@ -15,7 +14,6 @@ D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\D
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.csproj.CopyComplete
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
-D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.SettingsResourse.resources
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.csproj.CoreCompileInputs.cache
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -30,3 +28,15 @@ D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\D
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\bin\Debug\netcoreapp3.1\FormForTest.dll.config
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.AboutUser.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.AdminForm.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.LoginForm.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.Properties.Resources.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.Properties.SettingsResourse.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.Registration.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.ScreanSeaver.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.UserForm.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.csprojAssemblyReference.cache
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.UI.LoginForm.resources
+D:\VS Project\C#\DiplomProject\AISCreditMeneger\Forma for Test\FormForTest\obj\Debug\netcoreapp3.1\FormForTest.UI.UserForm.resources

@@ -63,8 +63,8 @@ namespace FormForTest.Controllers
         }
         public void RegistrationNewUser(User user)
         {
-            RegistrationAndLoginController registrationController = new RegistrationAndLoginController(ContextDB);
-            registrationController.RegistrationNewUser(user);
+           // LoginPresinter registrationController = new LoginPresinter();
+           // registrationController.RegistrationNewUser(user);
         }
     }
 }

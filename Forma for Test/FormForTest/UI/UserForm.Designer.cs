@@ -1,4 +1,4 @@
-﻿namespace FormForTest
+﻿namespace FormForTest.UI
 {
     partial class UserForm
     {
@@ -234,6 +234,7 @@
             this.butPost.TabIndex = 0;
             this.butPost.Text = "PostAnket";
             this.butPost.UseVisualStyleBackColor = true;
+            this.butPost.Click += new System.EventHandler(this.butPost_Click);
             // 
             // Menu
             // 
