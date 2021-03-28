@@ -22,12 +22,8 @@ namespace FormForTest.UI
 
         public User User { get; private set; }
 
-        public string Username { get { return tBoxLogin.Text; } }
-
-        public string Password{ get { return tBoxPassword.Text; } }
-
         public event Action<User> Logged_in;
-        public event Func<User> Login;
+        public event Func<string, string, User> Login;
         public event Action Clossed;
 
         public void ShowError(string mes)
@@ -43,7 +39,7 @@ namespace FormForTest.UI
         {
             // ProgressBar();
 
-            User = Login();
+            User = Login(tBoxLogin.Text, tBoxPassword.Text);
             Logged_in(User);
             Clossed();
         }

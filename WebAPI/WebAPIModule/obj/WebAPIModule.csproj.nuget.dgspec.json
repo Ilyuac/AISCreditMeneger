@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {}
+    "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {}
   },
   "projects": {
-    "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {
+    "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
+        "projectUniqueName": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
         "projectName": "WebAPIModule",
-        "projectPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
+        "projectPath": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
         "packagesPath": "C:\\Users\\GHOST\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\obj\\",
+        "outputPath": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,10 +41,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.2.5, )"
+            },
+            "Microsoft.DependencyValidation.Analyzers": {
+              "target": "Package",
+              "version": "[0.11.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -68,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

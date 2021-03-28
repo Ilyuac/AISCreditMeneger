@@ -12,19 +12,71 @@ namespace FormForTest
 {
     public partial class AdminForm : Form, IAdminForm
     {
-        public event Action PostRequest;
-        public event Action GetRequest;
-        public event Func<User, string> AddUser;
-        public event Func<User, string> RemoveUser;
-        public event Func<int, User, string> UpdateUser;
+        public event Action<User> AddUser;
+        public event Action<User> RemoveUser;
+        public event Func<int, User> UpdateUser;
+        public event Func<string, string> GetRequest;
+        public event Func<string, string, string> PostRequest;
+        public event Func<List<User>> GetUsers;
 
-        public List<User> Users { get; set; }
+        List<User> Users { get; set; }
         public User User { get; }
         public Request Request { get; set; }
+
         public AdminForm(User user)
         {
             InitializeComponent();
             User = user ?? throw new ArgumentNullException(nameof(user));
+
+            Users = GetUsers();
+            LoadUsersList();
+
+        }
+         
+        /// <summary>
+        /// Загрузка в лист.
+        /// </summary>
+        private void LoadUsersList()
+        {
+            foreach (var item in Users)
+            {
+                lBoxUser.Items.Add(item.ToString());
+            }
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Login = tBoxLogin.Text;
+            user.Password = tBoxPassword.Text;
+            user.Name = tBoxName.Text;
+
+            switch (cBoxRole.Text)
+            {
+                case "User": 
+                    user.Role = Role.User;
+                    break;
+                case "Admin":
+                    user.Role = Role.Admin;
+                    break;
+            }
+
+            AddUser(user);
+
+            ClearUserAdd();
+        }
+
+        private void butCancel_Click(object sender, EventArgs e)
+        {
+            ClearUserAdd();
+        }
+
+        private void ClearUserAdd()
+        {
+            tBoxLogin.Text = null;
+            tBoxName.Text = null;
+            tBoxPassword.Text = null;
+            cBoxRole.Text = null;
         }
     }
 }

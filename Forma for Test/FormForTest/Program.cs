@@ -33,8 +33,8 @@ namespace FormForTest
             startScreen.Dispose();
 
 
-            var loginController = new LoginPresinter(new LoginForm(),OpenGrandForm);
-            loginController.Run();
+            var loginPresinter = new LoginPresinter(new LoginForm(), OpenGrandForm);
+            loginPresinter.Run();
 
            // Application.Run(new LoginForm());//поискать инфу в инете как закрывать и открывать окна без закрытия приложения.
         }
@@ -43,9 +43,13 @@ namespace FormForTest
         {
             switch (user.Role)
             {
-                case Role.User: Application.Run(new UserForm(user));
+                case Role.User: 
+                    var userPresinter = new UserPresinter(new UserForm(user), new ContextDB());
+                    userPresinter.Run();
                     break;
-                case Role.Admin: Application.Run(new AdminForm(user));
+                case Role.Admin:
+                    var adminPresinter = new AdminFormPresinter(new AdminForm(user));
+                    adminPresinter.Run();
                     break;
             }
         }

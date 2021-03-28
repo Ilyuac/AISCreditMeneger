@@ -8,12 +8,14 @@ namespace FormForTest.Controllers
     class LoginPresinter : IPresinter
     {
         private readonly ILogin View;
+        IProviderDatabase _provider;
 
         public LoginPresinter(ILogin view, Action<User> action)
         {
             View = view;
+            _provider = ProviderFactory.GetLinqToDbProvider();
 
-            View.Login += new Func<User>(Login);
+            View.Login += new Func<string, string, User>(Login);
             View.Logged_in += new Action<User>(action);
             View.Clossed += new Action(Close);
         }
@@ -28,23 +30,20 @@ namespace FormForTest.Controllers
             View.Show();
         }
 
-        private User Login()
+        private User Login(string login, string password)
         {
             try
             {
-                if(string.IsNullOrWhiteSpace(View.Username))
+                if(string.IsNullOrWhiteSpace(login))
                 {
-                    throw new ArgumentNullException(nameof(View.Username), "Аргумент View.Username был null.");
+                    throw new ArgumentNullException(nameof(login), "Аргумент login был null.");
                 }
-                if(string.IsNullOrWhiteSpace(View.Password))
+                if(string.IsNullOrWhiteSpace(password))
                 {
-                    throw new ArgumentNullException(nameof(View.Password), "Аргумент View.Password был null.");
+                    throw new ArgumentNullException(nameof(password), "Аргумент password был null.");
                 }
 
-                using (var db = new ContextDB())
-                {
-                    return db.Users.FirstOrDefault(u => u.Login == View.Username && u.Password == View.Password);
-                }
+                return _provider.GetUser(login, password);
             }
             catch(ArgumentNullException ex)
             {

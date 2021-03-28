@@ -11,12 +11,19 @@ namespace FormForTest.UI
 {
     public partial class UserForm : Form, IUserForm
     {
-        public Request Request => throw new NotImplementedException();
-
         public User User { get; private set; }
 
-        public event Action PostRequest;
-        public event Action GetRequest;
+        public Request Request => throw new NotImplementedException();
+
+        /// <summary>
+        /// Запрос get
+        /// </summary>
+        public event Func<string, string> GetRequest;
+
+        /// <summary>
+        /// Запрос post.
+        /// </summary>
+        public event Func<string, string, string> PostRequest;
 
         public UserForm(User user)
         {
@@ -26,7 +33,7 @@ namespace FormForTest.UI
 
         private void butPost_Click(object sender, EventArgs e)
         {
-            PostRequest();
+            PostRequest("", "");//!
         }
     }
 }

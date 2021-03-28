@@ -1,74 +1,47 @@
 ﻿using FormForTest.Models;
 using FormForTest.UI;
-using System.Linq;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FormForTest.Controllers
 {
     class AdminFormPresinter : IAdminPresinter
     {
-        private readonly IAdminForm View;
+        IAdminForm _adminForm;
+        IProviderDatabase _provider;
 
-        public AdminFormPresinter(IAdminForm view)
+        public AdminFormPresinter(IAdminForm adminForm)
         {
-            View = view;
+            _adminForm = adminForm;
+            _provider = ProviderFactory.GetLinqToDbProvider();
 
-            View.RemoveUser += new Func<User, string>(RemoveUser);
-            View.AddUser += new Func<User, string>(AddUser);
-            View.UpdateUser += new Func<int, User, string>(UpdateUser);
+            _adminForm.GetUsers += new Func<List<User>>(_provider.GetAllUsers);
         }
 
-        public string AddUser(User user)
+        public void AddUser(User user)
         {
-            View.Users.Add(user);
-            return UpdateDBAsync();
-        }
-
-        public string RemoveUser(User user)
-        {
-            View.Users.Remove(user);
-            return UpdateDBAsync();
-        }
-
-        public string UpdateUser(int id, User newUser)
-        {
-            newUser.UserId = id;
-            int index = View.Users.FindIndex(u => u.UserId == id);
-            View.Users[index] = newUser;
-            return UpdateDBAsync();
-        }
-
-        public void Run()
-        {
-            View.Show();
+            _provider.AddUser(user);
         }
 
         public void Close()
         {
-            View.Close();
-        } 
+            _adminForm.Close();
+        }
 
-        private string UpdateDBAsync()
+        public void RemoveUser(User user)
         {
-           return Task<string>.Run(() =>
-            {
-                try
-                {
-                    using (var db = new ContextDB())
-                    {
-                        db.Users.UpdateRange(View.Users);
+            _provider.RemoveUser(user);
+        }
 
-                    }
-                    return "Successfyl update!!!";
-                }
-                catch(Exception ex)
-                {
-                    return ex.Message;
-                }
-            }).Result;
-        }//подумать над заменой string на struct Message { string Herder, string Message, enum Type }
+        public void Run()
+        {
+            _adminForm.Show();
+        }
+
+        public void UpdateUser(int id, User newUser)
+        {
+            newUser.UserId = id;
+            _provider.UpdateUser(newUser);
+        }
     }
 }

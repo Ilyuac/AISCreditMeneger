@@ -1,15 +1,32 @@
 ﻿using FormForTest.Models;
+using FormForTest.UI;
+using System;
 using System.IO;
 
 namespace FormForTest.Controllers
 {
-    class HttpRequestController
+    /// <summary>
+    /// Котероллер запросов.
+    /// </summary>
+    public class HttpRequestController : IHttpRequest
     {
         HttpReuest HttpReuest;
 
+        /// <summary>
+        /// Создание контроллера запросов.
+        /// </summary>
+        public HttpRequestController()
+        {
+        }
+
+        /// <summary>
+        /// GET запрос
+        /// </summary>
+        /// <param name="urlStr">Адрес</param>
+        /// <returns></returns>
         public string GET_HttpReuest(string urlStr)
         {
-            HttpReuest = new HttpReuest(urlStr,Method.GET);
+            HttpReuest = new HttpReuest(urlStr, Method.GET);
             string result;
             using (var StreamRead = new StreamReader(HttpReuest.RespounseStream))
             {
@@ -19,6 +36,12 @@ namespace FormForTest.Controllers
             return result;
         }
 
+        /// <summary>
+        /// POST запрос.
+        /// </summary>
+        /// <param name="urlStr">Адрез</param>
+        /// <param name="jsonStr">Json дополнение</param>
+        /// <returns></returns>
         public string POST_HttpReuest(string urlStr, string jsonStr)
         {
             HttpReuest = new HttpReuest(urlStr, Method.POST);

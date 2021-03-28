@@ -8,11 +8,14 @@ namespace FormForTest
     public partial class AboutUser : UserControl
     {
         public User User;
-        public AboutUser()
+        UI.IUserForm _userForm { get; set; }
+
+        public AboutUser(UI.IUserForm userForm)
         {
             //User = user ?? throw new ArgumentNullException(nameof(user));
             User = new User();
             InitializeComponent();
+            _userForm = userForm ?? throw new ArgumentNullException(nameof(userForm), "Была создана в пустой форме.");
 
             cBoxRole.DataSource = new object[] { Role.Admin, Role.User };
             Cancelation();
@@ -27,7 +30,7 @@ namespace FormForTest
                 updateUser.Login = tBoxLogin.Text;
                 updateUser.Password = tBoxPassword.Text;
                 updateUser.Role = (Role)cBoxRole.SelectedItem;
-                UserController userController = new UserController(User);
+                UserPresinter userController = new UserPresinter(_userForm, new ContextDB());
                 userController.Update(updateUser);
             }
             else
