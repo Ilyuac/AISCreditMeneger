@@ -20,7 +20,7 @@ namespace WebAPIModule.Models.NeurualNetwork
                 Inputs = new List<double>();
 
                 InitWheghtsRandomValue(input_Count);
-            }//TODOO: Возможна проверка на корректность данных
+            }
         }
         public Neuron()
         {
@@ -61,7 +61,7 @@ namespace WebAPIModule.Models.NeurualNetwork
                 else
                     Output = sum;
             }
-            else Output = -1.0;//TODO: Возможна проверка на корректность данных
+            else Output = -1.0;
             return Output;
         }
 
@@ -77,7 +77,6 @@ namespace WebAPIModule.Models.NeurualNetwork
 
         public void SetWeihts(params double[] weights)
         {
-            //TODO: удалить после создания обучения
             for (int i= 0;i < weights.Length;i++)
             {
                 Weights[i] = weights[i];

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj": {}
+    "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj": {}
   },
   "projects": {
-    "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj": {
+    "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj",
+        "projectUniqueName": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj",
         "projectName": "FormForTest",
-        "projectPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj",
+        "projectPath": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\FormForTest.csproj",
         "packagesPath": "C:\\Users\\GHOST\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\obj\\",
+        "outputPath": "D:\\VS Project\\.NET\\C#\\DiplomProject\\AISCreditMeneger\\Forma for Test\\FormForTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -29,77 +29,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {
-              "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {
-                "projectPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
-        "projectName": "WebAPIModule",
-        "projectPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\WebAPIModule.csproj",
-        "packagesPath": "C:\\Users\\GHOST\\.nuget\\packages\\",
-        "outputPath": "D:\\VS Project\\C#\\DiplomProject\\AISCreditMeneger\\WebAPI\\WebAPIModule\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\GHOST\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -111,14 +41,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.Core": {
+            "Microsoft.AspNet.WebApi.Client": {
               "target": "Package",
-              "version": "[2.2.5, )"
+              "version": "[5.2.7, )"
             },
-            "Newtonsoft.Json": {
+            "Microsoft.DependencyValidation.Analyzers": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[0.11.0, )"
+            },
+            "linq2db": {
+              "target": "Package",
+              "version": "[3.3.0, )"
             }
           },
           "imports": [
@@ -132,14 +67,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
