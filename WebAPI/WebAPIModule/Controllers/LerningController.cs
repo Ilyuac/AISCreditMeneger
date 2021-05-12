@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WebAPIModule.Models;
 using WebAPIModule.Models.NeurualNetwork;
 
 namespace WebAPIModule.Controllers
@@ -15,15 +11,18 @@ namespace WebAPIModule.Controllers
     {
         private NeuralNetworks NeuralNetworks;
         private ILogger<NeuronNetworkController> _logger;
-        public LerningController(ILogger<NeuronNetworkController> logger, ref NeuralNetworks networks)
+        public LerningController(ILogger<NeuronNetworkController> logger)
         {
             _logger = logger;
-            NeuralNetworks = networks;
         }
-        [HttpPost]//Добавить отметку о завершении обучения
-        public void LoadDataSet(List<Tuple<double, double[]>> DataSet, int epoch)
+
+        [HttpPost]
+        public IActionResult LoadDataSet(NetworkAndDataSet obj)
         {
-            NeuralNetworks.Learn(DataSet, epoch);
+            NeuralNetworks = obj.Network;
+            NeuralNetworks.Learn(obj.DataSet, obj.Epoch);
+
+            return Ok("Successfully");
         }
     }
 }

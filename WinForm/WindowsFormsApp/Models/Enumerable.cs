@@ -28,8 +28,8 @@ namespace WindowsFormsApp.Models
     }
     public enum Cars
     {
-        Yes,
-        No
+        No,
+        Yes
     }
     public enum Gender
     {

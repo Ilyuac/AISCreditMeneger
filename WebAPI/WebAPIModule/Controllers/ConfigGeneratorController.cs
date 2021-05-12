@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mime;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebAPIModule.Models.NeurualNetwork;
 
@@ -24,7 +18,7 @@ namespace WebAPIModule.Controllers
         public ConfigGeneratorController(ILogger<NeuronNetworkController> logger)
         {
             _logger = logger;
-            LerningController = new LerningController(logger, ref NeuralNetworks);
+            LerningController = new LerningController(logger);
         }
         //// GET: api/<ConfigGeneratorController>
         //[HttpGet]
@@ -37,9 +31,13 @@ namespace WebAPIModule.Controllers
         public string Get(bool isTopology)
         {
             if (isTopology)
+            {
                 return SerializibleController.ConvertToJsonString(topology);
+            }
             else
+            {
                 return NeuralNetworks.GetConfig();
+            }
         }
         // POST api/<ConfigGeneratorController>
         [HttpPost]
@@ -51,11 +49,12 @@ namespace WebAPIModule.Controllers
             return Ok(NeuralNetworks);
         }
         //// PUT api/<ConfigGeneratorController>
-        [HttpPost]
+        [HttpPut]
         public IActionResult LoadConfig(NeuralNetworks config)
         {
             NeuralNetworks = new NeuralNetworks();
             NeuralNetworks = config;
+
             return Ok(NeuralNetworks);
         }
     }

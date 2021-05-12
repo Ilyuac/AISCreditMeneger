@@ -1,5 +1,5 @@
 ﻿using WindowsFormsApp.Models;
-using WindowsFormsApp.Controllers;
+using WindowsFormsApp.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,9 +50,9 @@ namespace WindowsFormsApp.UI
             Request.Salary = Convert.ToInt32(tBox_SalaryIn.Text);
             mtBox_PhoneOut.Text = Request.Phone = mtBox_PhoneIn.Text;
 
-            var json = JsonSerlizebleController.ConvertToJsonString(Request);
+            var json = ConverterController.ConvertAnketToJson(Request);
             var result = PostRequest("", json);
-            var resultObj = JsonSerlizebleController.ConvertToObject<Request>(result);
+            var resultObj = ConverterController.ConvertToObject<Request>(result);
             chBoxRecomendate.Checked = resultObj.Recomendate;
         }
 

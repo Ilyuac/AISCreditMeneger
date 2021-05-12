@@ -4,7 +4,7 @@ using System.IO;
 
 namespace WebAPIModule.Controllers
 {
-    public abstract class SerializibleController
+    public static class SerializibleController
     {
         public static string ConvertToJsonString<T>(T obj)
         {

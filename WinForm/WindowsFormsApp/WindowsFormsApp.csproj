@@ -63,8 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AdminFormPresinter.cs" />
+    <Compile Include="Controller\ConverterController.cs" />
     <Compile Include="Controller\HttpRequestController.cs" />
-    <Compile Include="Controller\JsonSerlizibleController.cs" />
     <Compile Include="Controller\LoginPresinter.cs" />
     <Compile Include="Controller\UserPresenter.cs" />
     <Compile Include="Models\DbTest.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +125,10 @@
     <EmbeddedResource Include="UI\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">

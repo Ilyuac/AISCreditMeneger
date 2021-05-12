@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WebAPIModule.Models.NeurualNetwork
 {
@@ -12,6 +8,7 @@ namespace WebAPIModule.Models.NeurualNetwork
         public int OutputCount { get; set; }
         public double LearningRate { get; set; }
         public List<int> HiddenLayers { get; set; }
+
         public Topology(int inputCount, int outputCount, double learningRate, params int[] layers)
         {
             InputCount = inputCount;
@@ -19,7 +16,6 @@ namespace WebAPIModule.Models.NeurualNetwork
             LearningRate = learningRate;
             HiddenLayers = new List<int>();
             HiddenLayers.AddRange(layers);
-
         }
 
         public Topology()
@@ -28,3 +24,5 @@ namespace WebAPIModule.Models.NeurualNetwork
         }
     }
 }
+
+
