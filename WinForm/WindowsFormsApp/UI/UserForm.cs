@@ -1,5 +1,4 @@
 ﻿using WindowsFormsApp.Models;
-using WindowsFormsApp.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApp.Controllers;
 
 namespace WindowsFormsApp.UI
 {
@@ -19,12 +19,12 @@ namespace WindowsFormsApp.UI
         /// <summary>
         /// Запрос get
         /// </summary>
-        public event Func<string, string> GetRequest;
+        public event Func<string> GetRequest;
 
         /// <summary>
         /// Запрос post.
         /// </summary>
-        public event Func<string, string, string> PostRequest;
+        public event Func<string, string> PostRequest;
         public event Action<Request> InsertRequest;
 
         public UserForm(User user)
@@ -51,7 +51,7 @@ namespace WindowsFormsApp.UI
             mtBox_PhoneOut.Text = Request.Phone = mtBox_PhoneIn.Text;
 
             var json = ConverterController.ConvertAnketToJson(Request);
-            var result = PostRequest("", json);
+            var result = PostRequest(json);
             var resultObj = ConverterController.ConvertToObject<Request>(result);
             chBoxRecomendate.Checked = resultObj.Recomendate;
         }

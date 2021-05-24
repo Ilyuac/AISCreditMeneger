@@ -1,7 +1,6 @@
-﻿using WindowsFormsApp.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using WindowsFormsApp.Controllers;
+using WindowsFormsApp.Models;
 
 namespace WindowsFormsApp.UI
 {
@@ -42,12 +41,12 @@ namespace WindowsFormsApp.UI
         /// <summary>
         /// Событие get запроса.
         /// </summary>
-        event Func<string, string> GetRequest;
+        event Func<string> GetRequest;
 
         /// <summary>
         /// Событие post запроса.
         /// </summary>
-        event Func<string, string, string> PostRequest;
+        event Func<string, string> PostRequest;
 
         /// <summary>
         /// Событие отправки в БД.

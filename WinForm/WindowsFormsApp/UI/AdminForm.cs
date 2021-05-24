@@ -14,8 +14,8 @@ namespace WindowsFormsApp.UI
         public event Action<User> AddUser;
         public event Action<User> RemoveUser;
         public event Func<int, User> UpdateUser;
-        public event Func<string, string> GetRequest;
-        public event Func<string, string, string> PostRequest;
+        public event Func<string> GetRequest;
+        public event Func<string, string> PostRequest;
         public event Func<List<User>> GetUsers;
         public event Action<Request> InsertRequest;
 
@@ -97,6 +97,21 @@ namespace WindowsFormsApp.UI
             }
 
             LoadUsersList();
+        }
+
+        private void butSelectFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                tBoxPath.Text = fileDialog.FileName;
+            }
+        }
+
+        private void butLearn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

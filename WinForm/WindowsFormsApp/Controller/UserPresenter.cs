@@ -5,6 +5,7 @@ namespace WindowsFormsApp.Controllers
 {
     class UserPresenter : IPresenter
     {
+        static string webPathBase = Properties.Settings.Default.WebPathConfig;
         IUserForm _userForm;
         IProviderDatabase _provider;
 
@@ -28,17 +29,17 @@ namespace WindowsFormsApp.Controllers
             _userForm.Show();
         }
 
-        string PostRequest(string url, string json)
+        string PostRequest(string json)
         {
             HttpRequestController requestController = new HttpRequestController();
-            string result = requestController.POST_HttpReuest(url, json);
+            string result = requestController.POST_HttpReuest(webPathBase + Properties.Settings.Default.WebPathUser, json);
             return result;
         }
 
-        string GetRequest(string url)
+        string GetRequest()
         {
             HttpRequestController requestController = new HttpRequestController();
-            return requestController.GET_HttpReuest(url);
+            return requestController.GET_HttpReuest(webPathBase + Properties.Settings.Default.WebPathUser);
         }
 
         void InsertAnket(Request request)

@@ -9,6 +9,7 @@ namespace WindowsFormsApp.Controllers
     {
         IAdminForm _adminForm;
         IProviderDatabase _provider;
+        HttpRequestController requestController = new HttpRequestController();
 
         public AdminFormPresinter(IAdminForm adminForm)
         {        
@@ -44,6 +45,13 @@ namespace WindowsFormsApp.Controllers
         {
             newUser.UserId = id;
             _provider.UpdateUser(newUser);
+        }
+
+        public void Learn(string path)
+        {
+            string text =  ConverterController.ReadFile(path);
+            var request = requestController.POST_HttpReuest("https://localhost:44343/api/ConfigGenerator/Lerning", text);
+            ConverterController.ConvertToObject<>
         }
     }
 }

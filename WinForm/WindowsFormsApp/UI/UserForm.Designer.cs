@@ -147,6 +147,9 @@
             // cBox_CarsIn
             // 
             this.cBox_CarsIn.FormattingEnabled = true;
+            this.cBox_CarsIn.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
             this.cBox_CarsIn.Location = new System.Drawing.Point(95, 127);
             this.cBox_CarsIn.Name = "cBox_CarsIn";
             this.cBox_CarsIn.Size = new System.Drawing.Size(154, 21);
@@ -155,6 +158,9 @@
             // cBox_MaterialStatusIn
             // 
             this.cBox_MaterialStatusIn.FormattingEnabled = true;
+            this.cBox_MaterialStatusIn.Items.AddRange(new object[] {
+            "Single",
+            "Married"});
             this.cBox_MaterialStatusIn.Location = new System.Drawing.Point(95, 101);
             this.cBox_MaterialStatusIn.Name = "cBox_MaterialStatusIn";
             this.cBox_MaterialStatusIn.Size = new System.Drawing.Size(154, 21);
@@ -172,6 +178,10 @@
             // cBox_RealtyIn
             // 
             this.cBox_RealtyIn.FormattingEnabled = true;
+            this.cBox_RealtyIn.Items.AddRange(new object[] {
+            "None",
+            "House",
+            "Apartment"});
             this.cBox_RealtyIn.Location = new System.Drawing.Point(95, 76);
             this.cBox_RealtyIn.Name = "cBox_RealtyIn";
             this.cBox_RealtyIn.Size = new System.Drawing.Size(154, 21);
@@ -221,6 +231,9 @@
             // cBox_GenderIn
             // 
             this.cBox_GenderIn.FormattingEnabled = true;
+            this.cBox_GenderIn.Items.AddRange(new object[] {
+            "Female",
+            "Male"});
             this.cBox_GenderIn.Location = new System.Drawing.Point(95, 51);
             this.cBox_GenderIn.Name = "cBox_GenderIn";
             this.cBox_GenderIn.Size = new System.Drawing.Size(154, 21);

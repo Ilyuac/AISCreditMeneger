@@ -2,10 +2,11 @@
 using Microsoft.Extensions.Logging;
 using WebAPIModule.Models.NeurualNetwork;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace WebAPIModule.Controllers
 {
+    /// <summary>
+    /// Контроллер для конфигурации нейронной сети.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ConfigGeneratorController : ControllerBase
@@ -13,33 +14,21 @@ namespace WebAPIModule.Controllers
         private static Topology topology = new Topology(8, 1, 0.002, 4, 2);
         private NeuralNetworks NeuralNetworks = new NeuralNetworks(topology);//8,1,0.002,4,2
         private ILogger<NeuronNetworkController> _logger;
-        LerningController LerningController;
 
+        /// <summary>
+        /// Конструктор контроллера.
+        /// </summary>
+        /// <param name="logger"></param>
         public ConfigGeneratorController(ILogger<NeuronNetworkController> logger)
         {
             _logger = logger;
-            LerningController = new LerningController(logger);
         }
-        //// GET: api/<ConfigGeneratorController>
-        //[HttpGet]
-        //public string Get()
-        //{
-        //    return NeuralNetworks.GetConfig();
-        //}
-        // GET: api/<ConfigGeneratorController>
-        [HttpGet("isTopology")]
-        public string Get(bool isTopology)
-        {
-            if (isTopology)
-            {
-                return SerializibleController.ConvertToJsonString(topology);
-            }
-            else
-            {
-                return NeuralNetworks.GetConfig();
-            }
-        }
-        // POST api/<ConfigGeneratorController>
+
+        /// <summary>
+        /// Конфигурация.
+        /// </summary>
+        /// <param name="Topology">Топология конфигурации.</param>
+        /// <returns>Результат запроса, созданная нейронная сеть.</returns>
         [HttpPost]
         [Consumes("application/json")]
         public IActionResult BeginConfig(Topology Topology)
@@ -48,7 +37,12 @@ namespace WebAPIModule.Controllers
 
             return Ok(NeuralNetworks);
         }
-        //// PUT api/<ConfigGeneratorController>
+
+        /// <summary>
+        /// Загрузка конфигурации.
+        /// </summary>
+        /// <param name="config">Конфигурация нейронной сети.</param>
+        /// <returns>Результат запроса.</returns>
         [HttpPut]
         public IActionResult LoadConfig(NeuralNetworks config)
         {

@@ -14,5 +14,23 @@
     <Setting Name="GenderMultiplier" Type="System.Double" Scope="Application">
       <Value Profile="(Default)">25.98</Value>
     </Setting>
+    <Setting Name="SalaryMultiplier" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">0.05</Value>
+    </Setting>
+    <Setting Name="WebPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://localhost:44343/api/</Value>
+    </Setting>
+    <Setting Name="WebPathUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">NeuronNetwork</Value>
+    </Setting>
+    <Setting Name="WebPathConfig" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ConfigGenerator</Value>
+    </Setting>
+    <Setting Name="WebPathLearn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/ConfigGenerator/Lerning</Value>
+    </Setting>
+    <Setting Name="LocalPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">./Config/NeuronNetwork.json</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1,0 +1,10 @@
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\WebAPIModule.exe
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\WebAPIModule.dll
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\WebAPIModule.deps.json
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\WebAPIModule.runtimeconfig.json
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\WebAPIModule.pdb
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.DotNet.PlatformAbstractions.dll
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+D:\VS Project\.NET\C#\DiplomProject\AISCreditMeneger\WebAPI\WebAPIModule\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll

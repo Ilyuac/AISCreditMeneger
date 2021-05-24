@@ -44,9 +44,16 @@
             this.tBoxLogin = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.butSelectFile = new System.Windows.Forms.Button();
+            this.tBoxPath = new System.Windows.Forms.TextBox();
+            this.butLearn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -161,6 +168,9 @@
             // cBoxRole
             // 
             this.cBoxRole.FormattingEnabled = true;
+            this.cBoxRole.Items.AddRange(new object[] {
+            "Administrator",
+            "User"});
             this.cBoxRole.Location = new System.Drawing.Point(75, 170);
             this.cBoxRole.Name = "cBoxRole";
             this.cBoxRole.Size = new System.Drawing.Size(352, 21);
@@ -190,6 +200,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(433, 246);
@@ -207,6 +218,55 @@
             this.tabPage3.Text = "About user";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.butLearn);
+            this.groupBox1.Controls.Add(this.tBoxPath);
+            this.groupBox1.Controls.Add(this.butSelectFile);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(422, 78);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Selecting a file with a training sample:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "File path:";
+            // 
+            // butSelectFile
+            // 
+            this.butSelectFile.Location = new System.Drawing.Point(387, 15);
+            this.butSelectFile.Name = "butSelectFile";
+            this.butSelectFile.Size = new System.Drawing.Size(30, 23);
+            this.butSelectFile.TabIndex = 1;
+            this.butSelectFile.Text = "...";
+            this.butSelectFile.UseVisualStyleBackColor = true;
+            this.butSelectFile.Click += new System.EventHandler(this.butSelectFile_Click);
+            // 
+            // tBoxPath
+            // 
+            this.tBoxPath.Location = new System.Drawing.Point(63, 17);
+            this.tBoxPath.Name = "tBoxPath";
+            this.tBoxPath.Size = new System.Drawing.Size(318, 20);
+            this.tBoxPath.TabIndex = 2;
+            // 
+            // butLearn
+            // 
+            this.butLearn.Location = new System.Drawing.Point(341, 44);
+            this.butLearn.Name = "butLearn";
+            this.butLearn.Size = new System.Drawing.Size(75, 23);
+            this.butLearn.TabIndex = 3;
+            this.butLearn.Text = "Lerning";
+            this.butLearn.UseVisualStyleBackColor = true;
+            this.butLearn.Click += new System.EventHandler(this.butLearn_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +280,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -242,5 +305,10 @@
         private System.Windows.Forms.TextBox tBoxName;
         private System.Windows.Forms.TextBox tBoxPassword;
         private System.Windows.Forms.TextBox tBoxLogin;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tBoxPath;
+        private System.Windows.Forms.Button butSelectFile;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button butLearn;
     }
 }
